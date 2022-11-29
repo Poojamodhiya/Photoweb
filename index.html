@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>PhotoGallery</title>
+</head>
   <body>
+ 
     <header>
       <nav>
         <div class="logo">Photo<span>pi</span>X</div>
@@ -48,33 +46,37 @@
         </ul>
       </div>
       <div class="portfolio-item">
-        <div class="item nature">
+        <div class="item nature"  data-aos="flip-left">
           <img src="img/p1.jpg" width="100" height="100" alt="" />
         </div>
-        <div class="item fashion">
+        <div class="item fashion"  data-aos="zoom-in">
           <img src="img/p2.jpg" width="100" height="100" alt="" />
         </div>
-        <div class="item wedding">
+        <div class="item wedding"  data-aos="zoom-out">
           <img src="img/p3.jpg" width="100" height="100" alt="" />
         </div>
 
-        <div class="item nature">
+        <div class="item nature" data-aos="zoom-in">
           <img src="img/p4.jpg" width="100" height="100" alt="" />
         </div>
-        <div class="item fashion">
+        <div class="item fashion" data-aos="flip-right">
           <img src="img/p5.jpg" width="100" height="100" alt="" />
         </div>
-        <div class="item wedding">
+        <div class="item wedding" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
           <img src="img/p6.jpg" width="100" height="100" alt="" />
         </div>
 
-        <div class="item nature">
+        <div class="item nature" data-aos="zoom-in">
           <img src="img/p7.jpg" width="100" height="100" alt="" />
         </div>
-        <div class="item fashion">
+        <div class="item fashion" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
           <img src="img/p8.jpg" width="100" height="100" alt="" />
         </div>
-        <div class="item wedding">
+        <div class="item wedding" data-aos="zoom-out">
           <img src="img/p9.jpg" width="100" height="100" alt="" />
         </div>
       </div>
@@ -140,10 +142,10 @@
 			<h1>Information</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur elit. Nihil sit dicta.</p>
      
-			<i class="fa fa-whatsapp"></i>
-			<i class="fa fa-instagram"></i>
-			<i class="fa fa-telegram"></i>
-			<i class="fa fa-twitter"></i>
+			<i class="fab fa-facebook-f"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-instagram"></i>
+			<i class="fab fa-twitter"></i>
 		</div>
 
 
@@ -176,34 +178,32 @@
 	</div>
 </footer>
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script>
-      $(".portfolio-item").isotope({
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script>
+    $('.portfolio-item').isotope({
         // options
-        itemSelector: ".item",
-        layoutMode: "fitRows",
-      });
-      $(".portfolio-menu ul li").click(function () {
-        $(".portfolio-menu ul li").removeClass("active");
-        $(this).addClass("active");
+        itemSelector: '.item',
+        layoutMode: 'fitRows'
+    });
+    $('.portfolio-menu ul li').click(function () {
+        $('.portfolio-menu ul li').removeClass('active');
+        $(this).addClass('active');
 
-        var selector = $(this).attr("data-filter");
-        $(".portfolio-item").isotope({
-          filter: selector,
+
+        var selector = $(this).attr('data-filter');
+        $('.portfolio-item').isotope({
+            filter: selector
         });
         return false;
-      });
-    </script>
+    });
+</script>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
   </body>
 </html>
