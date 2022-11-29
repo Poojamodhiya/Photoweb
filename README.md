@@ -2,4 +2,5 @@
 
 Output
 
-![photowe](https://user-images.githubusercontent.com/114070689/204464755-2730692d-9d8f-4520-b261-f1f3b35f6ddf.png)
+
+![photoweb1](https://user-images.githubusercontent.com/114070689/204476910-5f624416-a4b3-4b60-b72c-6d07d3829762.png)
